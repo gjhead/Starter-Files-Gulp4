@@ -2,6 +2,7 @@
 
 # just a little crazy about sass cache.  this def takes care of ALL OF IT
 .scssc
+*.sassc
 *.scssc
 .sass-cache
 *.sass-cache/
@@ -18,13 +19,9 @@
 *.swp
 *.vi
 *~
-*.sass-cache
-*.sassc
-*.scssc
 
 
 # OS or Editor folders
-.DS_Store
 Thumbs.db
 .cache
 .project
@@ -32,7 +29,7 @@ Thumbs.db
 .buildpath
 .tmproj
 node_modules
-config.codekit
+
 
 # Ignore my build directory
 
