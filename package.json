@@ -1,0 +1,27 @@
+{
+  "name": "starter-files-gulp4",
+  "version": "1.0.0",
+  "description": "These are my absolute minimal gulp4.0 starter files.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gjhead@github.com/gjhead/Starter-Files-Gulp4.git"
+  },
+  "keywords": [
+    "gulp4",
+    "starterfiles",
+    "starter"
+  ],
+  "author": "G. Jason Head",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gjhead/Starter-Files-Gulp4/issues"
+  },
+  "homepage": "https://github.com/gjhead/Starter-Files-Gulp4#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}
