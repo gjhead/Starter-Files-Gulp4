@@ -104,19 +104,34 @@ function copyBase() {
 
 // Watch task to run while dev-ing n'at
 function watch() {	
+  	livereload({ start: true })
+    livereload.listen()
+	gulp.watch('./a/kit/**/*.kit', html);
   	gulp.watch('./a/sass/**/*.scss', css);
-  	gulp.watch("./a/js/**/*.js", scripts);
-  	
-  	
-  	//gulp.watch("./a/js/**/*.js", gulp.series(scriptsLint, scripts));
+  	gulp.watch('./a/js/**/*.js', js);
+  	gulp.watch(
+	    [
+	      './static/**',
+	      './basedir/**'
+	    ],
+    copy
+  );
+  
 }
 
+const js 			= 	gulp.series(lint, scripts);
+const copy 			=	gulp.parallel(copyStatic, copyBase);
 
-const copy = gulp.parallel(copyStatic, copyBase);
+const dev 			= 	gulp.parallel(css, js, html, watch);
+const build			= 	gulp.parallel(css, js, html);
 
 exports.css 		= css;
 exports.lint		= lint;
-exports.scripts 	= scripts;
+exports.js 			= js;
 exports.html 		= html;
 exports.copy 		= copy;
 exports.watch 		= watch;
+
+exports.build 		= build;
+exports.dev 		= dev;
+
