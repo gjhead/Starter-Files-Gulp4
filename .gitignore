@@ -33,4 +33,4 @@ node_modules
 
 # Ignore my build directory
 
-build
+site
