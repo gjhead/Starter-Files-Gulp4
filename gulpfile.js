@@ -6,8 +6,8 @@ const gulp = require("gulp");
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const postcssPresetEnv = require('postcss-preset-env');
 
 const jshint = require('gulp-jshint');
 const stylish = require('jshint-stylish');
@@ -36,8 +36,11 @@ function css() {
             
 			.pipe(postcss(
 				[
-					autoprefixer({browsers: 'last 3 versions'}), 
-					cssnano({})
+					postcssPresetEnv({
+						browsers: 'last 3 versions',
+						autoprefixer: { browsers: 'last 3 versions' }
+					 }),
+					//cssnano({})
 				]
 			))
             
