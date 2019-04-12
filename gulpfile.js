@@ -23,6 +23,8 @@ const livereload = require('gulp-livereload');
 // Define tasks after requiring dependencies
 
 
+sass.compiler = require('sass');
+
 function css() {
     return (
         gulp
