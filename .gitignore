@@ -20,7 +20,6 @@
 *.vi
 *~
 
-
 # OS or Editor folders
 Thumbs.db
 .cache
@@ -32,5 +31,4 @@ node_modules
 
 
 # Ignore my build directory
-
 site
