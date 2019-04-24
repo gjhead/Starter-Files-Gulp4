@@ -93,6 +93,7 @@ function html() {
 
 
 // Copy some files.  Remember to combine these into the copy task.
+// This really has no need to be two different tasks.  will fix some day when i am not lazy.
 function copyStatic() {	
 	return (
         gulp
