@@ -46,6 +46,7 @@ function css() {
             
 			.pipe(sourcemaps.write('.'))			
 			.pipe(gulp.dest('./site/css'))
+			.pipe(livereload())
     );
 }
 
@@ -75,6 +76,7 @@ function scripts() {
 			.pipe(rename('scripts.min.js'))
 			.pipe(uglify())
 			.pipe(gulp.dest('./site/js'))
+			.pipe(livereload())
     );
 }
 
@@ -85,6 +87,7 @@ function html() {
 			.src('./a/kit/**/*.kit')
 			.pipe(kit())
 			.pipe(gulp.dest('./site/'))
+			.pipe(livereload())
     );
 }
 
@@ -137,6 +140,8 @@ exports.html 		= html;
 exports.copy 		= copy;
 exports.watch 		= watch;
 
-exports.build 		= build;
+// gulp dev - this is the task for when actively working on the project
 exports.dev 		= dev;
 
+// gulp dev - for making the build when going live.  this is primarily for deploybot
+exports.build 		= build;
